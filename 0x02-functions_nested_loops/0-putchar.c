@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - Print the word "_putchar"
@@ -15,6 +15,6 @@ int main(void)
 	{
 		putchar(p[i]);
 	}
-	putchar('\n';);
+	putchar('\n');
 	return (0);
 }
