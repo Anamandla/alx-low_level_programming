@@ -1,30 +1,53 @@
 #include <stdio.h>
 
 /**
- * main - Print numbers from 00 to 99
  *
- * Return: Always 0 (Success)
+ * main - main function
+ *
+ * code for printing all possible combination of two digis in ascending order
+ *
+ * Return: 0 success
+ *
  */
+
 int main(void)
+
 {
-	int tens;
-	int ones;
 
-	for (tens = 0; tens <= 9; tens++)
+	int i;
+
+	int j;
+
+
+
+	for (i = 0; i < 9; i++)
+
 	{
-		for (ones = 0; ones <= 9; ones++)
-		{
-			putchar(tens + '0');
-			putchar(ones + '0');
 
-			if (!(tens == 9 && ones == 9))
-			{
-				putchar(',');
-				putchar(' ');
-			}
+		for (j = i + 1; j < 10; j++)
+
+		{
+
+			putchar((i % 10) + '0');
+
+			putchar((j % 10) + '0');
+
+
+
+			if (i == 8 && j == 9)
+
+				continue;
+
+			putchar(',');
+
+			putchar(' ');
+
 		}
+
 	}
+
 	putchar('\n');
 
 	return (0);
+
 }
