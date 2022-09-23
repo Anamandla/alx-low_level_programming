@@ -1,18 +1,33 @@
 #include <stdio.h>
 
 /**
- * main - Print all single digit numbers
  *
- * Return: Always 0 (Success)
+ * main - main function
+ *
+ * Description:printing digit number
+ *
+ * Return: 0
+ *
  */
-int main(void)
-{
-	int digit;
 
-	for (digit = 0; digit < 10; digit++)
+int main(void)
+
+{
+
+	int x;
+
+
+
+	for (x = 0; x <= 9; x++)
+
 	{
-		printf("%i", digit);
+
+		printf("%d", x);
+
 	}
 
+	putchar('\n');
+
 	return (0);
+
 }
