@@ -1,14 +1,16 @@
 #include <stdio.h>
 
+#include <stdlib.h>
+
 /**
  *
- * main - a program that prints all arguments it receives.
+ * main - multiply two numbers
  *
  * @argc: arguement count
  *
  * @argv: array of pointers to arguement strings
  *
- * Return: 0
+ * Return: result of multiplication or 1
  *
  */
 
@@ -16,9 +18,29 @@ int main(int argc, char *argv[])
 
 {
 
-	while (argc--)
+	int a, b, result;
 
-		printf("%s\n", *argv++);
+
+
+	if (argc <= 2)
+
+	{
+
+		printf("Error\n");
+
+		return (1);
+
+	}
+
+	/* atoi convert a string to an int */
+
+	a = atoi(argv[1]);
+
+	b = atoi(argv[2]);
+
+	result = a * b;
+
+	printf("%d\n", result);
 
 	return (0);
 
